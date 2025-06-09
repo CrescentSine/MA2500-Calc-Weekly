@@ -17,11 +17,12 @@ def send_server(title, text):
         print("\nWarning: 微信消息无法发送，请设置sendkey!")
         return
 
-    api =  "https://sctapi.ftqq.com/{}.send".format(SCKEY)
+    api = "https://sctapi.ftqq.com/{}.send".format(SCKEY)
     content = text.replace('\n','\n\n')
     data = {
-            'title':title, #标题
-            'desp':content} #内容
+        'title':title, #标题
+        'desp':content #内容
+    }
     headers = {
         'Content-Type': 'application/json;charset=utf-8'
     }
